@@ -1,3 +1,3 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<h1><%= @current_user %></h1>
+<% name = current_user.present? ? ", #{current_user.email}" : ", click Sign In to continue" %>
+
+<h1>Welcome<%= name %></h1>

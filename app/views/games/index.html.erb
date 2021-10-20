@@ -1,0 +1,13 @@
+<h1>Hello from games index</h1>
+<p>produce a list of games, when clicked on will take you to that page displaying all comments</p>
+
+<% @games.each do |game| %>
+<ul>
+  <li>
+    <%= link_to image_tag(game.photo), game_path(game) %><br/>
+    Title: <%= game.title %><br/>
+    Description: <%= game.description %><br/>
+    Rating: <%= game.rank %>
+  </li>
+</ul>
+<% end %>
