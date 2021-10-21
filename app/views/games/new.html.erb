@@ -1,16 +1,12 @@
 <h1>Add a new Game!</h1>
   <%= form_for @game do |form| %>
-  <%= form.label :title %>:
-  <%= form.text_field :title %>
+  <%= form.text_field :title, placeholder: "Title" %>
   <br/>
-  <%= form.label :description %>:
-  <%= form.text_field :description %>
+  <%= form.text_field :description, placeholder: "Description" %>
   <br/>
-  <%= form.label :rating %>:
-  <%= form.text_field :rank %>
+  <%= form.text_field :rank, placeholder: "Rating" %>
   <br/>
-  <%= form.label :photo %>:
-  <%= form.text_field :photo %>
+  <%= form.text_field :photo, placeholder: "Photo Url" %>
   <br/>
   <%= form.submit%>
 <% end %>
