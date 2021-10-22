@@ -1,12 +1,13 @@
 <h1>Games</h1>
 
 <% @games.each do |game| %>
-<ul>
+<ul class="game_cards">
   <li>
-    <%= link_to image_tag(game.photo), game_path(game) %><br/>
+    <%= link_to image_tag(game.photo, width: "auto", height: 300), game_path(game), class: "index_game_pictures" %><br/>
     Title: <%= game.title %><br/>
     Description: <%= game.description %><br/>
-    Rating: <%= game.rank %>
+    Rating: <%= game.rank %><br/>
+    <%= button_to "View Game", game_path(game), method: :get, class: "game_view_button" %>
   </li>
 </ul>
 <% end %>

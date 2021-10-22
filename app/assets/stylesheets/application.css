@@ -13,4 +13,67 @@
  *= require_tree .
  *= require_self
  */
- bdy
+body {
+  background-image: url("pacman.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;
+  color: white;
+}
+
+.index_game_pictures {
+  width: 200px;
+  height: auto
+}
+
+.game_cards{
+  background: lightgrey;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+  color: black;
+  list-style-type: none;
+  box-shadow: 5px 3px rgb(127 , 210, 236);
+}
+
+.game_view_button{
+  border-radius: 2px;
+  background-color: rgb(127 , 210, 236);
+}
+
+.new_game_form {
+  margin: 1.25em;
+  text-align: center;
+  padding: 1.25em;
+  display: grid;
+}
+.new_game_title {
+  text-align: center;
+}
+
+.home_index {
+  text-align: center;
+}
+
+.sign_up {
+  text-align: center;
+
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.log_in {
+  text-align: center;
+}
+.game_show {
+  text-align: center;
+}
+.game_comments {
+  list-style-type: none;
+  background-color: grey;
+  padding: 1.25em;
+}

@@ -1,17 +1,26 @@
-<%=image_tag(@game.photo)%><br/>
-<%= @game.title %><br/>
-<%= form_for [@game, @comment] do |form| %>
-  <%= form.text_field :comment, placeholder: "Add New Comment" %>
-  <br/>
-  <%= form.submit%>
-<% end %>
-<label>Comments: </label>
-<% @game.comments.each do |comment| %>
-  <ul>
-    <li>
-      <%= comment.user.name %>:
-      <%= comment.comment %>
-    </li>
-  </ul>
-<% end %>
+<div class= "game_show">
+  <div class= "field">
+    <%=image_tag(@game.photo) %><br/>
+  </div>
+  <%= @game.title %><br/>
+  <div class = "field">
+  <%= form_for [@game, @comment] do |form| %>
+    <%= form.text_field :comment, placeholder: "Add New Comment" %>
+    <br/>
+    </div>
+    <%= form.submit%>
+    <br/>
+  <% end %>
+  <div class= "comment_container">
+  <label>Comments: </label>
+  <% @game.comments.each do |comment| %>
+    <ul>
+      <li class= "game_comments">
+        <%= comment.user.name %>:
+        <%= comment.comment %>
+      </li>
+    </ul>
+  <% end %>
+  </div>
+</div>
 

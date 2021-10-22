@@ -1,12 +1,26 @@
-<h1>Add a new Game!</h1>
+<h1 class = "new_game_title">Add a new Game!</h1>
+<div class = "new_game_form">
   <%= form_for @game do |form| %>
-  <%= form.text_field :title, placeholder: "Title" %>
-  <br/>
-  <%= form.text_field :description, placeholder: "Description" %>
-  <br/>
-  <%= form.text_field :rank, placeholder: "Rating" %>
-  <br/>
-  <%= form.text_field :photo, placeholder: "Photo Url" %>
-  <br/>
-  <%= form.submit%>
-<% end %>
+    <%= form.text_field :title, placeholder: "Title" %>
+    <br/>
+    <%= form.text_field :description, placeholder: "Description" %>
+    <br/>
+    <small>Add a description of the game above</small>
+    <br/>
+    <%= form.text_field :rank, placeholder: "Rating" %>
+    <br/>
+    <small>Rate the game on a scale from 1-10</small>
+    <br/>
+    <%= form.text_field :photo, placeholder: "Photo Url" %>
+    <br/>
+    <small>Add an image url to be displayed</small>
+    <br/>
+    <%= form.submit%>
+  <% end %>
+
+  <% if @game.errors.any? %>
+  <p> 
+    <%= @game.errors.full_messages %>
+  </p>
+  <% end %>
+</div>
