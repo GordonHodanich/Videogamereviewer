@@ -1,0 +1,11 @@
+<div class= "game_show">
+  <h1>My Comments</h1>
+  <% current_user.comments.each do |comment| %>
+  <ul class= "comment_list">
+    <li>
+      <%= comment.game.title %>
+      <%= comment.comment %>
+    </li>
+  </ul>
+  <% end %>
+</div>
