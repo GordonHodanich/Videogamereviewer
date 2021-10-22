@@ -14,8 +14,8 @@
   <div class= "comment_container">
   <label>Comments: </label>
   <% @game.comments.each do |comment| %>
-    <ul>
-      <li class= "game_comments">
+    <ul class= "game_comments">
+      <li>
         <%= comment.user.name %>:
         <%= comment.comment %>
       </li>

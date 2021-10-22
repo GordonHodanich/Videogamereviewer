@@ -46,7 +46,6 @@ body {
 .new_game_form {
   margin: 1.25em;
   text-align: center;
-  padding: 1.25em;
   display: grid;
 }
 .new_game_title {

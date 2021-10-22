@@ -3,8 +3,10 @@
   <% current_user.comments.each do |comment| %>
   <ul class= "comment_list">
     <li>
-      <%= comment.game.title %>
-      <%= comment.comment %>
+      Game: <%= comment.game.title %>
+      <br/>
+      Comment: <%= comment.comment %>
+      <br/>
     </li>
   </ul>
   <% end %>
