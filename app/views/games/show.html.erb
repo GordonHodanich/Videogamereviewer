@@ -13,7 +13,7 @@
   <% end %>
   <div class= "comment_container">
   <label>Comments: </label>
-  <% @game.comments.each do |comment| %>
+  <% @game.comments.order(created_at: :desc).each do |comment| %>
     <ul class= "game_comments">
       <li>
         <%= comment.user.name %>:
