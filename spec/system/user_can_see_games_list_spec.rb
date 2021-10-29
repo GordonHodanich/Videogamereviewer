@@ -5,6 +5,7 @@ describe "when a user visited the games index page", type: :system do
   it "they can see a list of all the games" do
     game = create_game
     another_game = another_create_game
+    
     log_in_as_user
 
     visit games_path
@@ -23,7 +24,6 @@ describe "when a user visited the games index page", type: :system do
 
   def log_in_as_user
     user = create_user
-   
     sign_in user
   end
 
